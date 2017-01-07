@@ -1,0 +1,80 @@
+#multi-selection {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+#multi-selection .search-input {
+    margin-bottom: 10px;
+    padding-right: 24px;
+}
+
+#multi-selection span.label-field {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    width: 100%;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+#multi-selection .search-box {
+    position: relative;
+}
+
+#multi-selection #search-icon {
+    position: absolute;
+    right: 9px;
+    top: 5px;
+    color: #999;
+}
+
+.dropdown-list {
+    padding: 5px 10px;
+    position: absolute;
+    max-height: 300px;
+    z-index: 1000;
+    overflow-x: hidden;
+    font-size: 13px;
+    line-height: 1.6em;
+    text-transform: none;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 1px 7px 2px rgba(135,158,171,.2);
+}
+
+.dropdown-list .option-list {
+    list-style: none;
+    padding: 0;
+}
+
+.option-list label {
+    font-weight: normal;
+}
+
+.option-list label input {
+    margin-right: 10px;
+}
+
+#multi-selection #trigger-btn {
+    width: 100%;
+    padding: 0 20px 0 12px;
+}
+
+#multi-selection #trigger-btn:focus {
+    border: 1px solid #3da6ff;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.select-option-row {
+    display: inline-block;
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+}

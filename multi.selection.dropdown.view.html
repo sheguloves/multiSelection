@@ -1,0 +1,19 @@
+<div id="multi-selection">
+    <button id="trigger-btn" ng-disabled="isDisabled" ng-click="$ctrl.onTrigger()" ng-disabled="isDisabled" class="btn btn-default">
+        <span class="label-field" ng-show="$ctrl.selections && $ctrl.selections.length > 0">{{$ctrl.getSelectionText($ctrl.selections)}}</span>
+        <span class="label-field" ng-show="!$ctrl.selections || $ctrl.selections.length === 0">{{category}}</span>
+        <i class="caret"></i>
+    </button>
+    <div ng-show="$ctrl.open && !$ctrl.noSource" class="dropdown-list">
+        <div class="search-box">
+            <input type="text" class="form-control input-sm search-input" ng-model="$ctrl.search" placeholder="{{'Search...' | translate}}"></input>
+            <i id="search-icon" class="glyph-icon icon-search"></i>
+        </div>
+        <ul class="option-list">
+            <li ng-repeat="item in $ctrl.sourceList track by $index" class="select-option-row">
+                <label><input type="checkbox" ng-model="$ctrl.selectionMapping[labelField ? item[labelField] : item]" ng-change="$ctrl.selectionChange(item)">{{$ctrl.getLabel(item)}}
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
